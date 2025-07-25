@@ -37,28 +37,26 @@
 
 <body>
 
-  <!-- ======= Header ======= -->
   <header id="header" class="header d-flex align-items-center">
+    <div class="overlay-blur"></div> <!-- لایه جدا برای محو کردن زیر هدر -->
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
-
-      <a href="index.html" class="logo d-flex align-items-center">
-
-      </a>
-
+      <a href="index.html" class="logo d-flex align-items-center"></a>
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
       <nav id="navbar" class="navbar" style="direction: rtl;">
         <ul>
-          <li><a href="#AboutUs" class="active text-white fs-4 ">درباره ما</a></li>
-          <li><a href="#catalog" class="header-nav text-white fs-4 ">کاتالوگ</a></li>
-          <li><a href="#product" class="header-nav text-white fs-4 ">محصولات</a></li>
-          <li><a href="#dealer" class="header-nav text-white fs-4 ">نمایندگی</a></li>
-          <li><a href="#info" class="header-nav text-white fs-4 ">اطلاعات</a></li>
+          <li><a href="#AboutUs" class="active text-white fs-4">درباره ما</a></li>
+          <li><a href="#catalog" class="header-nav text-white fs-4">کاتالوگ</a></li>
+          <li><a href="#product" class="header-nav text-white fs-4">محصولات</a></li>
+          <li><a href="#dealer" class="header-nav text-white fs-4">نمایندگی</a></li>
+          <li><a href="#info" class="header-nav text-white fs-4">اطلاعات</a></li>
+        </ul>
       </nav>
     </div>
-  </header><!-- End Header -->
+  </header>
 
-  <!-- ======= Hero Section ======= -->
+
+  <!-- ================== Header Section ===================== -->
   <section id="hero" class="hero">
 
     <div class="info d-flex align-items-center">
@@ -85,10 +83,6 @@
       <div class="carousel-item"
         style="background-image: url('assets/img/header.img/Common\ Trouble\ Spots_\ Brakes\ \(1\).jpg')">
       </div>
-      <!-- <div class="carousel-item"
-        style="background-image: url('assets/img/header.img/Common\ Trouble\ Spots_\ Brakes\ \(1\).jpg')">
-      </div> -->
-
       <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
         <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
       </a>
@@ -104,7 +98,7 @@
   <main id="main">
 
 
-    <!-- ======= aboutUs Section ======= -->
+    <!-- ================== aboutUs Section =================== -->
     <section id="AboutUs" class="constructions" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 
@@ -192,79 +186,84 @@
     </section><!-- End Constructions Section -->
 
 
-    <!-- ==================================== Catalog Section ================================== -->
-    <section id="catalog" class="services section-bg" style="direction: rtl;">
+    <!-- ======================================= product Section ================================== -->
+    <section id="product" class="services section-bg" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 
-        <div class="section-header">
-          <h2 id="catalog">کاتالوگ</h2>
-          <p>کاتالوگ محصولات پاکساز، مجموعه‌ای کامل از انواع فیلترهای صنعتی و خودرویی با
-            مشخصات فنی دقیق و استانداردهای بین‌المللی است. با یک نگاه،
-            آنچه نیاز دارید را پیدا کنید؛ کیفیت، عملکرد و تنوع در کنار هم.
-            راهنمایی سریع برای انتخاب هوشمندانه، دقیقاً همین‌جاست.</p>
+        <div class="section-product">
+          <h2>محصولات</h2>
+          <p>فیلترهای روغن پاکساز، تجسم سال‌ها تحقیق و تعهدی بی‌بدیل به کیفیت و دقت مهندسی‌اند. هر قطعه، طراحی‌شده برای
+            حفاظت مطلق از موتور، تضمینی است بر دوام، کارایی و بهره‌وری پایدار.
+            انتخاب پاکساز، انتخابی است آگاهانه برای حفظ سرمایه و ارتقای استانداردهای عملکرد خودرو در هر شرایطی.
+            پاکساز؛ نماد تخصص، اعتماد و تعالی در صنعت فیلترسازی.
+
+          </p>
 
         </div>
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="CatalogItem" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item  position-relative">
               <h3>فیلتر روغن المنتی</h3>
               <p class="text-dark fs-4 display-5 lh-base"> عملکردی بی‌نقص، طراحی‌شده برای حفاظت حداکثری از موتورهای
                 صنعتی و خودرویی.</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="CatalogItem" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
               <h3>فیلتر روغن پیچی</h3>
               <p class="text-dark fs-4 display-5 lh-base">نصب آسان، فیلتراسیون قدرتمند، محافظت بی‌وقفه از موتور</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="CatalogItem" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
               <h3>فیلتر هوای سبک</h3>
               <p class="text-dark fs-4 display-5 lh-base">جریان هوای پاک، تنفس بهتر موتور، عملکردی بی‌نقص در هر مسیر.
               </p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="CatalogItem" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
               <h3>فیلتر گازوئیل</h3>
               <p class="text-dark fs-4 display-5 lh-base">جداسازی کامل ناخالصی‌ها، تضمین سوخت پاک برای عملکردی بی‌نقص.
               </p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="CatalogItem" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative">
               <h3>صافی بنزین</h3>
               <p class="text-dark fs-4 display-5 lh-base"> انتخاب هوشمندانه برای افزایش عمر موتور و کاهش مصرف سوخت.</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2 data-aos=" id="CatalogItem" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6 rounded-2 data-aos=" id="ProductItem" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item position-relative">
               <h3>فیلتر کابین</h3>
               <p class="text-dark fs-4 display-5 lh-base">حفاظت از سلامت شما و سیستم تهویه خودرو؛ با فیلتر کابین دقیق و
                 با دوام.</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-right"></i></a>
+              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
             </div>
           </div>
           <!-- End Service Item -->
 
+        </div>
+        <div>
+          <button class="button-product" onclick="ButtonProduct()">مشاهده بیشتر</button>
         </div>
 
       </div>
@@ -275,75 +274,64 @@
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2 id="productt">محصولات</h2>
-          <p>لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ، و با استفاده از طراحان گرافیک است، چاپگرها و
-            متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است، و برای شرایط فعلی تکنولوژی مورد نیاز، و کاربردهای
-            متنوع با هدف بهبود ابزارهای کاربردی می باشد، کتابهای زیادی در شصت و سه درصد گذشته حال و آینده، شناخت فراوان
-            جامعه و متخصصان را می طلبد، تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی،
-            و فرهنگ پیشرو در زبان فارسی ایجاد کرد، در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه
-            راهکارها، و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی، و جوابگوی سوالات
-            پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد.</p>
+          <h2 id="productt">کاتالوگ</h2>
+
+          <p>کاتالوگ محصولات پاکساز، مجموعه‌ای کامل از انواع فیلترهای صنعتی و خودرویی با
+            مشخصات فنی دقیق و استانداردهای بین‌المللی است. با یک نگاه،
+            آنچه نیاز دارید را پیدا کنید؛ کیفیت، عملکرد و تنوع در کنار هم.
+            راهنمایی سریع برای انتخاب هوشمندانه، دقیقاً همین‌جاست.</p>
         </div>
 
         <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry"
           data-portfolio-sort="original-order">
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product.img/1.JPG" class="img-fluid" alt="image">
               </div>
             </div><!-- End Projects Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product.img/2..JPG" class="img-fluid" alt="image">
               </div>
             </div><!-- End Projects Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product.img/3..JPG" class="img-fluid " alt="">
               </div>
             </div><!-- End Projects Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/9..JPG" class="img-fluid" alt="image">
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/5..JPG" class="img-fluid" alt="">
+              </div>
+            </div><!-- End Projects Item -->
+
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/6..JPG" class="img-fluid" alt="">
+              </div>
+            </div><!-- End Projects Item -->
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/8..JPG" class="img-fluid" alt="image">
+              </div>
+            </div><!-- End Projects Item -->
+            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
                 <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="">
               </div>
             </div><!-- End Projects Item -->
 
-            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/5..JPG class=" img-fluid" alt="">
-              </div>
-            </div><!-- End Projects Item -->
-
-            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/6..JPG" class="img-fluid" alt="">
-              </div>
-            </div><!-- End Projects Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/7..JPG" class="img-fluid" alt="image">
-              </div>
-            </div><!-- End Projects Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/8..JPG" class="img-fluid" alt="image">
-              </div>
-            </div><!-- End Projects Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/9..JPG" class="img-fluid" alt="image">
-              </div>
-            </div><!-- End Projects Item -->
-            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
-              <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/9..JPG" class="img-fluid" alt="image">
-              </div>
-            </div><!-- End Projects Item -->
 
           </div><!-- End Projects Container -->
 
@@ -352,29 +340,23 @@
       </div>
     </section><!-- End Our Projects Section -->
 
-    <!-- ===================================== dealer ==================================== -->
+    <!-- ======================================== dealer section ==================================== -->
     <section id="dealer" class="testimonials section-bg" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
-          <h2>Testimonials</h2>
+          <h2>نمایندگی ها</h2>
           <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia
             reprehenderit sunt deleniti</p>
         </div>
 
         <div class="slides-2 swiper">
           <div class="swiper-wrapper">
-
-            <div class="swiper-slide">
+            <div class="swiper-slide bg-light text-dark w-25">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
-                  <h3>Saul Goodman</h3>
+                  <h3>تهران</h3>
                   <h4>Ceo &amp; Founder</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
@@ -383,18 +365,13 @@
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide bg-light text-dark w-25">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
                   <h3>Sara Wilsson</h3>
                   <h4>Designer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
@@ -403,18 +380,13 @@
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide bg-light text-dark w-25">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
                   <h3>Jena Karlis</h3>
                   <h4>Store Owner</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
@@ -423,18 +395,13 @@
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide bg-light text-dark w-25">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
                   <h3>Matt Brandon</h3>
                   <h4>Freelancer</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
@@ -443,18 +410,13 @@
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
 
-            <div class="swiper-slide">
+            <div class="swiper-slide bg-light text-dark w-25">
               <div class="testimonial-wrap">
                 <div class="testimonial-item">
-                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
                   <h3>John Larson</h3>
                   <h4>Entrepreneur</h4>
-                  <div class="stars">
-                    <i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i
-                      class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>
-                  </div>
                   <p>
                     <i class="bi bi-quote quote-icon-left"></i>
                     Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
@@ -464,33 +426,109 @@
                   </p>
                 </div>
               </div>
-            </div><!-- End testimonial item -->
+            </div>
+            <div class="swiper-slide bg-light text-dark w-25">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
+                    quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide bg-light text-dark w-25">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
+                    quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide bg-light text-dark w-25">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
+                    quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide bg-light text-dark w-25">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
+                    quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide bg-light text-dark w-25">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bi bi-quote quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
+                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
+                    quid.
+                    <i class="bi bi-quote quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div>
 
           </div>
           <div class="swiper-pagination"></div>
         </div>
 
       </div>
-    </section><!-- End Testimonials Section -->
+    </section>
 
 
   </main><!-- End #main -->
 
   <!-- ======= Footer ======= -->
-  <footer id="info" class="footer">
+  <footer id="info" class="footer" style="direction: rtl;">
 
     <div class="footer-content position-relative">
       <div class="container">
         <div class="row">
 
-          <div class="col-lg-4 col-md-6">
+          <div class="col-lg-4 col-md-6 col-sm-3">
             <div class="footer-info">
-              <h3>UpConstruction</h3>
+              <h3>کارخانه فیلتر پاکساز</h3>
               <p>
-                A108 Adam Street <br>
+                نشانی: <br>
                 NY 535022, USA<br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <strong id="call">تماس:</strong> +1 5589 55488 55<br>
+                <strong id="call">تماس:</strong> +1 5589 55488 55<br>
+                <strong>ایمیل:</strong> info@example.com<br>
               </p>
               <div class="social-links d-flex mt-3">
                 <a href="#" class="d-flex align-items-center justify-content-center"><i class="bi bi-twitter"></i></a>
@@ -501,30 +539,27 @@
             </div>
           </div><!-- End footer info column-->
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Useful Links</h4>
+          <div class="col-lg-2 col-md-6 col-sm-3 footer-links">
+            <h4>لینک ها</h4>
             <ul>
-              <li><a href="#">Home</a></li>
-              <li><a href="#">About us</a></li>
-              <li><a href="#">Services</a></li>
-              <li><a href="#">Terms of service</a></li>
-              <li><a href="#">Privacy policy</a></li>
+              <li><a href="#">درباره ما</a></li>
+              <li><a href="#catalod">کاتالوگ</a></li>
+              <li><a href="#product">محصولات</a></li>
+              <li><a href="#dealer">نمایندگی ها</a></li>
+              <li><a href="#call">تماس با ما</a></li>
             </ul>
           </div><!-- End footer links column-->
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Our Services</h4>
+          <div class="col-lg-4 col-md-6 col-sm-3 footer-links">
+            <h4 style="text-align: center; width: 50%;">نشانی رو نقشه</h4>
             <ul>
-              <li><a href="#">Web Design</a></li>
-              <li><a href="#">Web Development</a></li>
-              <li><a href="#">Product Management</a></li>
-              <li><a href="#">Marketing</a></li>
-              <li><a href="#">Graphic Design</a></li>
+              <li><a href="#"><img src="assets/img/footer/CyaphCw54Tzb.jpg" alt="Map"
+                    style="width: 200px; height: 200px;"></a></li>
             </ul>
           </div><!-- End footer links column-->
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Hic solutasetp</h4>
+          <div class="col-lg-2 col-md-6 col-sm-3 footer-links">
+            <h4>راه های ارتباطی</h4>
             <ul>
               <li><a href="#">Molestiae accusamus iure</a></li>
               <li><a href="#">Excepturi dignissimos</a></li>
@@ -534,33 +569,6 @@
             </ul>
           </div><!-- End footer links column-->
 
-          <div class="col-lg-2 col-md-3 footer-links">
-            <h4>Nobis illum</h4>
-            <ul>
-              <li><a href="#">Ipsam</a></li>
-              <li><a href="#">Laudantium dolorum</a></li>
-              <li><a href="#">Dinera</a></li>
-              <li><a href="#">Trodelas</a></li>
-              <li><a href="#">Flexo</a></li>
-            </ul>
-          </div><!-- End footer links column-->
-
-        </div>
-      </div>
-    </div>
-
-    <div class="footer-legal text-center position-relative">
-      <div class="container">
-        <div class="copyright">
-          &copy; Copyright <strong><span>UpConstruction</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/upconstruction-bootstrap-construction-website-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> Distributed by <a
-            href="https://themewagon.com">ThemeWagon</a>
         </div>
       </div>
     </div>
