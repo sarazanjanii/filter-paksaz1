@@ -916,7 +916,8 @@ h6 {
   /* در RTL میشه بالا سمت راست */
   z-index: 1000;
 }
-
+/* ------------ button language ------------------ */
+/* 
 .language-switcher button {
   background: linear-gradient(135deg, #1f2c3e, #2b3f54);
   color: #fff;
@@ -954,7 +955,6 @@ h6 {
   background-color: rgba(255, 255, 255, 0.1);
 }
 
-/* ریسپانسیو */
 @media (max-width: 768px) {
   .language-switcher {
     top: 15px;
@@ -965,7 +965,7 @@ h6 {
     font-size: 13px;
     padding: 6px 12px;
   }
-}
+} */
 
 
 /*-------------------------------------------------------------- product --------------------------------------------------------------*/
