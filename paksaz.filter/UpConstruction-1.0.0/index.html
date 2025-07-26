@@ -33,21 +33,48 @@
 
   <!-- Template Main CSS File -->
   <link href="assets/css/main.css" rel="stylesheet">
+  <!-- AOS Library -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 1200,
+      once: true,
+    });
+  </script>
+
 </head>
 
 <body>
-
   <header id="header" class="header d-flex align-items-center">
-    <div class="overlay-blur"></div> <!-- لایه جدا برای محو کردن زیر هدر -->
+    <div class="overlay-blur"></div>
     <div class="container-fluid container-xl d-flex align-items-center justify-content-between">
+
+      <!-- دکمه انتخاب زبان -->
+      <div class="language-switcher dropdown order-0">
+        <button class="btn btn-sm dropdown-toggle text-white" type="button" id="languageDropdown"
+          data-bs-toggle="dropdown" aria-expanded="false">
+          Language🌐
+        </button>
+        <ul class="dropdown-menu" aria-labelledby="languageDropdown">
+          <li><a class="dropdown-item" href="#">فارسی</a></li>
+          <li><a class="dropdown-item" href="#">English</a></li>
+        </ul>
+      </div>
+
+      <!-- لوگو -->
       <a href="index.html" class="logo d-flex align-items-center"></a>
+
+      <!-- منو موبایل -->
       <i class="mobile-nav-toggle mobile-nav-show bi bi-list"></i>
       <i class="mobile-nav-toggle mobile-nav-hide d-none bi bi-x"></i>
+
+      <!-- ناوبری -->
       <nav id="navbar" class="navbar" style="direction: rtl;">
         <ul>
           <li><a href="#AboutUs" class="active text-white fs-4">درباره ما</a></li>
-          <li><a href="#catalog" class="header-nav text-white fs-4">کاتالوگ</a></li>
-          <li><a href="#product" class="header-nav text-white fs-4">محصولات</a></li>
+          <li><a href="#catalog" class="header-nav text-white fs-4"> محصولات</a></li>
+          <li><a href="#product" class="header-nav text-white fs-4">کاتالوگ</a></li>
           <li><a href="#dealer" class="header-nav text-white fs-4">نمایندگی</a></li>
           <li><a href="#info" class="header-nav text-white fs-4">اطلاعات</a></li>
         </ul>
@@ -98,12 +125,27 @@
   <main id="main">
 
 
-    <!-- ================== aboutUs Section =================== -->
+    <!-- =========================================== aboutUs Section ============================== -->
     <section id="AboutUs" class="constructions" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-header">
           <h2>کیفیت بی‌رقیب</h2>
+          <div class="wave-container">
+            <svg class="animated-wave" viewBox="0 0 1440 100" preserveAspectRatio="none">
+              <path
+                d="M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,69.3C840,64,960,64,1080,69.3C1200,75,1320,85,1380,90.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z"
+                fill="#2a2e5c14">
+                <animate attributeName="d" dur="6s" repeatCount="indefinite" values="
+                  M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,69.3C840,64,960,64,1080,69.3C1200,75,1320,85,1380,90.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z;
+
+                  M0,26L60,36.7C120,47,240,65,360,72C480,78,600,68,720,63.3C840,58,960,58,1080,63.3C1200,69,1320,78,1380,83.7L1440,90L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z;
+
+                  M0,32L60,42.7C120,53,240,75,360,80C480,85,600,75,720,69.3C840,64,960,64,1080,69.3C1200,75,1320,85,1380,90.7L1440,96L1440,0L1380,0C1320,0,1200,0,1080,0C960,0,840,0,720,0C600,0,480,0,360,0C240,0,120,0,60,0L0,0Z
+                  " />
+              </path>
+            </svg>
+          </div>
           <p>ما در کارخانه فیلتر پاکساز با استفاده از پیشرفته ترین فناوری ها و استاندارد های بین‌المللی,
             فیلتر های تولید میکنیم که محافظت بی چون‌وچرای موتور خودرو های شما هستند;
             تضمینی برای عملکردی قدرتمند و عمر طولانی ماشین.</p>
@@ -111,7 +153,7 @@
 
         <div class="row gy-2 mt-3">
 
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="card-item">
               <div class="row">
                 <div class="About-Picture">
@@ -128,8 +170,9 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Card Item -->
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="card-item">
               <div class="row">
                 <div class="About-Picture">
@@ -145,8 +188,9 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Card Item -->
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="card-item">
               <div class="row">
                 <div class="About-Picture">
@@ -162,8 +206,9 @@
                 </div>
               </div>
             </div>
-          </div><!-- End Card Item -->
-          <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+          </div>
+
+          <div class="col-lg-3 col-md-6" data-aos="zoom-in" data-aos-delay="200">
             <div class="card-item">
               <div class="row">
                 <div class="About-Picture">
@@ -180,96 +225,101 @@
               </div>
             </div>
           </div><!-- End Card Item -->
-
         </div>
       </div>
     </section><!-- End Constructions Section -->
 
 
     <!-- ======================================= product Section ================================== -->
-    <section id="products" class="services section-bg" style="direction: rtl;">
+    <section id="product" class="services section-bg" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 
         <div class="section-product">
           <h2>محصولات</h2>
-          <p>فیلترهای روغن پاکساز، تجسم سال‌ها تحقیق و تعهدی بی‌بدیل به کیفیت و دقت مهندسی‌اند. هر قطعه، طراحی‌شده برای
+          <p>
+            فیلترهای روغن پاکساز، تجسم سال‌ها تحقیق و تعهدی بی‌بدیل به کیفیت و دقت مهندسی‌اند. هر قطعه، طراحی‌شده برای
             حفاظت مطلق از موتور، تضمینی است بر دوام، کارایی و بهره‌وری پایدار.
             انتخاب پاکساز، انتخابی است آگاهانه برای حفظ سرمایه و ارتقای استانداردهای عملکرد خودرو در هر شرایطی.
             پاکساز؛ نماد تخصص، اعتماد و تعالی در صنعت فیلترسازی.
-
           </p>
-
         </div>
 
         <div class="row gy-4">
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="100">
-            <div class="service-item  position-relative">
+          <div class="col-lg-4 col-md-6 rounded-2 product-item" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-filter"></i></div>
               <h3>فیلتر روغن المنتی</h3>
-              <p class="text-dark fs-4 display-5 lh-base"> عملکردی بی‌نقص، طراحی‌شده برای حفاظت حداکثری از موتورهای
-                صنعتی و خودرویی.</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
+              <p class="text-dark fs-4 display-5 lh-base">عملکردی بی‌نقص، طراحی‌شده برای حفاظت حداکثری از موتورهای صنعتی
+                و خودرویی.</p>
+              <a href="#" class="readmore stretched-link" aria-label="اطلاعات فیلتر روغن المنتی"><span>اطلاعات</span><i
+                  class="bi bi-arrow-left"></i></a>
             </div>
           </div>
-          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="200">
+          <div class="col-lg-4 col-md-6 rounded-2 product-item" data-aos="fade-up" data-aos-delay="200">
             <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-gear"></i></div>
               <h3>فیلتر روغن پیچی</h3>
               <p class="text-dark fs-4 display-5 lh-base">نصب آسان، فیلتراسیون قدرتمند، محافظت بی‌وقفه از موتور</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
+              <a href="#" class="readmore stretched-link" aria-label="اطلاعات فیلتر روغن پیچی"><span>اطلاعات</span><i
+                  class="bi bi-arrow-left"></i></a>
             </div>
           </div>
-          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="300">
+          <div class="col-lg-4 col-md-6 rounded-2 product-item" data-aos="fade-up" data-aos-delay="300">
             <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-wind"></i></div>
               <h3>فیلتر هوای سبک</h3>
               <p class="text-dark fs-4 display-5 lh-base">جریان هوای پاک، تنفس بهتر موتور، عملکردی بی‌نقص در هر مسیر.
               </p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
+              <a href="#" class="readmore stretched-link" aria-label="اطلاعات فیلتر هوای سبک"><span>اطلاعات</span><i
+                  class="bi bi-arrow-left"></i></a>
             </div>
           </div>
-          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="400">
+          <div class="col-lg-4 col-md-6 rounded-2 product-item" data-aos="fade-up" data-aos-delay="400">
             <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-fuel-pump-diesel"></i></div>
               <h3>فیلتر گازوئیل</h3>
               <p class="text-dark fs-4 display-5 lh-base">جداسازی کامل ناخالصی‌ها، تضمین سوخت پاک برای عملکردی بی‌نقص.
               </p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
+              <a href="#" class="readmore stretched-link" aria-label="اطلاعات فیلتر گازوئیل"><span>اطلاعات</span><i
+                  class="bi bi-arrow-left"></i></a>
             </div>
           </div>
-          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2" id="ProductItem" data-aos="fade-up" data-aos-delay="500">
+          <div class="col-lg-4 col-md-6 rounded-2 product-item" data-aos="fade-up" data-aos-delay="500">
             <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-droplet"></i></div>
               <h3>صافی بنزین</h3>
-              <p class="text-dark fs-4 display-5 lh-base"> انتخاب هوشمندانه برای افزایش عمر موتور و کاهش مصرف سوخت.</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
+              <p class="text-dark fs-4 display-5 lh-base">انتخاب هوشمندانه برای افزایش عمر موتور و کاهش مصرف سوخت.</p>
+              <a href="#" class="readmore stretched-link" aria-label="اطلاعات صافی بنزین"><span>اطلاعات</span><i
+                  class="bi bi-arrow-left"></i></a>
             </div>
           </div>
-          <!-- End Service Item -->
 
-          <div class="col-lg-4 col-md-6 rounded-2 data-aos=" id="ProductItem" data-aos="fade-up" data-aos-delay="600">
+          <div class="col-lg-4 col-md-6 rounded-2 product-item" data-aos="fade-up" data-aos-delay="600">
             <div class="service-item position-relative">
+              <div class="icon"><i class="bi bi-fan"></i></div>
               <h3>فیلتر کابین</h3>
               <p class="text-dark fs-4 display-5 lh-base">حفاظت از سلامت شما و سیستم تهویه خودرو؛ با فیلتر کابین دقیق و
                 با دوام.</p>
-              <a href="#" class="readmore stretched-link"><span>اطلاعات</span><i class="bi bi-arrow-left"></i></a>
+              <a href="#" class="readmore stretched-link" aria-label="اطلاعات فیلتر کابین"><span>اطلاعات</span><i
+                  class="bi bi-arrow-left"></i></a>
             </div>
           </div>
-          <!-- End Service Item -->
 
         </div>
+
         <div>
           <button class="button-product" onclick="ButtonProduct()">مشاهده بیشتر</button>
         </div>
 
       </div>
-    </section><!-- End Services Section -->
+    </section>
 
-    <!-- ======================================== catalog section ======================================= -->
+    <!-- ===================================== catalog section ==================================== -->
     <section id="catalog" class="projects" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 
@@ -340,7 +390,7 @@
       </div>
     </section><!-- End Our Projects Section -->
 
-    <!-- ======================================== dealer section ==================================== -->
+    <!-- ====================================== dealer section ==================================== -->
     <section id="dealer" class="testimonials section-bg" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
 

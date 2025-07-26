@@ -8,6 +8,14 @@
   --color-default: #364d59;
   --color-primary: #feb900;
   --color-secondary: #52565e;
+  --main-color: #2a2e5c;
+  --accent-color: #ffb400;
+  --bg-glow: #454a7d88;
+  --text-color: #1a1a1a;
+  --card-bg: #ffffffd8;
+  --radius: 22px;
+  --transition: 0.4s ease;
+
 }
 
 /* Smooth scroll behavior */
@@ -84,14 +92,6 @@ h6 {
   transition: all 0.6s ease;
   /* animation: fadeUpTitle 1.2s ease-out forwards; */
 }
-
-
-
-
-
-
-
-
 
 /*--------------------------------------------------------------
 # Breadcrumbs
@@ -704,164 +704,152 @@ h6 {
 }
 
 /*-------------------------------------------------------------- AboutUs -------------------------------------------------------------*/
-.section-header {
-  text-align: center;
-  margin-bottom: 80px;
-  margin-top: 25px;
+/* بخش اصلی */
+#AboutUs {
+  position: relative;
+  background: linear-gradient(to bottom right, #fcfcfd, #eef1f7);
+  padding: 80px 20px;
+  overflow: hidden;
+  z-index: 0;
 }
 
-.section-header h2 {
-  font-size: 34px;
-  font-weight: 600;
-  /* وزن کمتر */
-  letter-spacing: 0.8px;
-  /* کمتر کشیده */
-  color: #1a1a3d;
-  text-align: center;
+/* بک‌گراند هنری پشت h2 */
+#AboutUs::before {
+  content: "";
+  position: absolute;
+  top: -100px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160%;
+  height: 300px;
+  background: radial-gradient(circle at center, #2a2e5c33 0%, transparent 70%);
+  opacity: 0.6;
+  z-index: 0;
+  pointer-events: none;
+  filter: blur(60px);
+}
+
+/* بخش هدر */
+.section-header {
   position: relative;
-  display: inline-block;
-  padding-bottom: 6px;
-  background: linear-gradient(90deg, #2a2e5c, #454a7d);
+  text-align: center;
+  margin-bottom: 70px;
+  z-index: 1;
+}
+
+/* تیتر خفن */
+.section-header h2 {
+  font-size: 44px;
+  font-weight: 900;
+  letter-spacing: 1.2px;
+  background: conic-gradient(from 180deg at 50% 50%, #2a2e5c, #3f438f, #ffb400, #2a2e5c);
+  background-size: 300%;
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 1px 1px 3px rgba(26, 26, 61, 0.2);
-  font-style: normal;
-  font-family: inherit;
-  /* فونت پیش‌فرض بدون تغییر */
-  cursor: pointer;
-  /* مثل لینک */
-  transition: color 0.3s ease;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 16px;
+  animation: gradientMove 5s infinite linear;
+  transition: var(--transition);
 }
 
+@keyframes gradientMove {
+  from {
+    background-position: 0% center;
+  }
+
+  to {
+    background-position: 100% center;
+  }
+}
+
+/* خط زیر h2 */
 .section-header h2::after {
   content: "";
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100%;
-  /* کل عرض متن */
-  height: 2px;
-  /* ضخیم‌تر */
-  background: #2a2e5c;
-  border-radius: 2px;
-  box-shadow: 0 0 8px #454a7d;
-  transition: background 0.3s ease, box-shadow 0.3s ease;
+  left: 50%;
+  width: 70%;
+  height: 4px;
+  background: linear-gradient(to right, #2a2e5c, #ffb400);
+  border-radius: 4px;
+  box-shadow: 0 0 10px #ffb400aa, 0 0 20px #2a2e5c88;
+  transform: translateX(-50%);
+  transition: var(--transition);
 }
 
-/* هاور برای h2 */
-.section-header h2:hover {
-  color: #2a2e5c;
+.wave-svg {
+  position: relative;
+  top: -60px;
+  z-index: 0;
+  pointer-events: none;
+  transform: scaleY(0.8);
 }
 
-.section-header h2:hover::after {
-  background: #454a7d;
-  box-shadow: 0 0 12px #6c73b8, 0 0 15px #6c73b8;
+.card-item:hover {
+  box-shadow: 0 12px 40px rgba(76, 76, 121, 0.25), 0 0 20px #ffb40055;
+  border-color: #bdbddd;
 }
 
+/* متن زیر h2 */
 .section-header p {
-  max-width: 700px;
-  margin: 26px auto 0;
-  font-size: 17px;
-  line-height: 2.2;
-  color: #2f3240;
-  font-weight: 400;
-  text-align: center;
-  letter-spacing: 0.7px;
-  user-select: text;
-  transition: all 0.4s ease;
+  max-width: 900px;
+  margin: 20px auto 0;
+  padding: 22px 28px;
+  font-size: 15px;
+  color: #222121;
+  line-height: 2;
+  font-weight: 500;
+  text-align: justify;
+  background: linear-gradient(135deg, #f9f9f9 0%, #e9e9e9 100%);
+  border-left: 4px solid rgb(207, 150, 20);
+  border-radius: 12px;
+  box-shadow:
+    0 12px 20px rgba(0, 0, 0, 0.07),
+    inset 0 0 10px rgba(135, 111, 38, 0.15);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  z-index: 1;
 }
 
-.section-header p:hover {
-  opacity: 1;
-  text-shadow: 0 3px 6px rgba(0, 0, 0, 0.14);
-  filter: drop-shadow(0 3px 3px rgba(0, 0, 0, 0.12));
-}
-
-.constructions {
-  background-color: #ffffffed;
-}
-
-.card-bg {
-  border-top-right-radius: 25px;
-  border-top-left-radius: 25px;
-}
-
-.constructions .card-item .card-bg {
-  min-height: 250px;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-
-.constructions {
-  padding: 30px 40px 70px 40px;
-}
-
-.constructions .card-item h4 {
-  font-weight: 700;
-  font-size: 20px;
-  margin-bottom: 15px;
-  color: var(--color-secondary);
-}
-
-.constructions {
-  color: var(--color-secondary);
-  margin: 0;
-}
-
-
-@media(max-width:1200px) {
-  .card-bg {
-    border-top-right-radius: 25px;
-    border-top-left-radius: 25px;
-  }
-
-  .card-item {
-    margin-top: 25px;
-  }
-
-  .section-header>p {
-    margin: 10px 5px 5px 5px;
-  }
-}
-
-/* کارت‌های بخش constructions */
-.constructions .card-item {
-  background-color: #f6f6f6dd;
-  /* کمی شفاف‌تر و ملایم‌تر */
-  border: 2px solid #e0e0e0cc;
-  border-radius: 25px;
-  box-shadow: 0 0 5px rgba(0, 0, 0, 0.05);
-  transition: transform 0.4s ease, box-shadow 0.4s ease, border-color 0.4s ease;
-  overflow: hidden;
-  min-height: 450px;
+/* کارت‌ها */
+.card-item {
+  background: var(--card-bg);
+  border-radius: var(--radius);
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.06);
+  transition: box-shadow var(--transition), border-color var(--transition);
+  min-height: 460px;
   display: flex;
   flex-direction: column;
-  cursor: pointer;
+  backdrop-filter: blur(6px);
+  border: 1.5px solid rgba(255, 255, 255, 0.3);
+  cursor: default;
+  position: relative;
+  z-index: 1;
 }
 
-/* حالت هاور کارت */
-.constructions .card-item:hover {
-  border-color: #8b8ba7;
-  box-shadow: 0 8px 20px rgba(174, 174, 200, 0.6);
-  transform: scale(1.05);
+.card-item:hover {
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.1), 0 0 12px #a1a1c3aa;
+  border-color: #a1a1c3aa;
 }
 
-/* بخش تصویر */
-.constructions .card-item .card-bg {
-  flex: 0 0 250px;
-  /* ارتفاع ثابت تصویر */
+/* تصویر کارت */
+.card-bg {
+  height: 240px;
   background-size: cover;
   background-position: center;
-  background-repeat: no-repeat;
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  border-top-left-radius: var(--radius);
+  border-top-right-radius: var(--radius);
+  transition: transform var(--transition), filter var(--transition);
 }
 
-/* بخش متن کارت */
-.constructions .card-item .card-body {
-  flex: 1;
+.card-item:hover .card-bg {
+  filter: brightness(1.05) contrast(1.1);
+}
+
+/* متن کارت */
+.card-body {
   padding: 25px 20px;
   text-align: center;
   display: flex;
@@ -870,41 +858,115 @@ h6 {
   gap: 12px;
 }
 
-.constructions .card-item .card-body h4.card-title {
+.card-body h4.card-title {
   font-size: 1.4rem;
-  color: #222;
-  margin-bottom: 8px;
-  font-weight: 600;
+  font-weight: 800;
+  color: var(--main-color);
+  transition: color var(--transition);
 }
 
-.constructions .card-item .card-body p {
-  color: #555;
+.card-item:hover .card-title {
+  color: var(--accent-color);
+}
+
+.card-body p {
   font-size: 1rem;
-  line-height: 1.5;
+  color: #555;
+  line-height: 1.8;
   margin: 0;
+  transition: color var(--transition);
 }
 
-.card-title {
-  font-weight: bolder;
-  transform: scaleX(1.2);
-  text-align: center;
+.card-item:hover .card-body p {
+  color: #333;
 }
 
-/* ریسپانسیو ساده برای موبایل */
-@media (max-width: 768px) {
-  .constructions .card-item {
-    min-height: auto;
-  }
-
-  .constructions .card-item .card-bg {
-    flex: none;
+/* ریسپانسیو */
+@media (max-width: 992px) {
+  .card-bg {
     height: 200px;
   }
 
-  .constructions .card-item .card-body {
+  .card-body {
     padding: 20px 15px;
   }
+
+  .section-header h2 {
+    font-size: 30px;
+  }
+
+  .section-header p {
+    font-size: 16px;
+    padding: 0 10px;
+  }
+
+  .card-item {
+    min-height: auto;
+  }
+
+  .wave-svg {
+    top: -40px;
+  }
 }
+
+.language-switcher {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  /* در RTL میشه بالا سمت راست */
+  z-index: 1000;
+}
+
+.language-switcher button {
+  background: linear-gradient(135deg, #1f2c3e, #2b3f54);
+  color: #fff;
+  border: none;
+  padding: 8px 14px;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.language-switcher button:hover {
+  background: linear-gradient(135deg, #2b3f54, #1f2c3e);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4);
+}
+
+.language-switcher .dropdown-menu {
+  background-color: #2b3f54;
+  border-radius: 8px;
+  border: none;
+  min-width: 120px;
+  padding: 5px 0;
+}
+
+.language-switcher .dropdown-item {
+  color: #fff;
+  font-size: 14px;
+  padding: 8px 15px;
+  transition: background-color 0.2s ease;
+}
+
+.language-switcher .dropdown-item:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* ریسپانسیو */
+@media (max-width: 768px) {
+  .language-switcher {
+    top: 15px;
+    left: 15px;
+  }
+
+  .language-switcher button {
+    font-size: 13px;
+    padding: 6px 12px;
+  }
+}
+
 
 /*-------------------------------------------------------------- product --------------------------------------------------------------*/
 .services .service-item {
@@ -1075,24 +1137,30 @@ section {
   opacity: 0.6;
 }
 
+.stretched-link:hover {
+  color: #1c3057;
+  font-weight: 700;
+}
+
 .button-product {
   display: block;
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   padding: 10px 22px;
-  width: 200px;
-  font-size: 15px;
-  font-weight: 700;
-  color: #1e1e1e;
-  background-color: #f0f0f0;
-  border: 1.5px solid #bcbcbc;
-  border-radius: 25px;
+  width: 220px;
+  font-size: 17px;
+  font-weight: 600;
+  color: #222;
+  background-color: #f5f5f7;
+  border: 2px solid #ccc;
+  border-radius: 30px;
   cursor: pointer;
   text-transform: uppercase;
   letter-spacing: 1.2px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.25s ease-in-out;
   position: relative;
   overflow: hidden;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.07);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .button-product::after {
@@ -1102,30 +1170,134 @@ section {
   left: 50%;
   transform: translateX(-50%) scaleX(0);
   transform-origin: center;
-  height: 2px;
-  width: 80%;
-  background-color: #444;
+  height: 2.5px;
+  width: 70%;
+  background-color: #180d48;
   transition: transform 0.3s ease-in-out;
+  border-radius: 2px;
 }
 
 .button-product:hover {
-  background-color: #bababa;
-  /* کمی روشن‌تر */
-  transform: translateY(-1px);
-  /* یکم بالا رفتن کمتر */
-  color: #121212;
-  box-shadow: 0 3px 10px rgba(57, 35, 95, 0.1);
-  /* سایه ملایم‌تر */
+  background-color: #d2d2d3;
+  color: #111;
+  border-color: #888;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
+  transform: translateY(-3px);
 }
 
 .button-product:hover::after {
   transform: translateX(-50%) scaleX(1);
 }
 
-.stretched-link:hover {
-  color: #1c3057;
-  font-weight: 700;
+/* =======================================================================6  */
+.services .service-item {
+  padding: 30px 25px;
+  background: #fff;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #1e1e1e;
 }
+
+.services .service-item:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.2);
+}
+
+.services .service-item .icon {
+  width: 60px;
+  height: 60px;
+  margin-bottom: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #f0f1f2;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+}
+
+.services .service-item:hover .icon {
+  background-color: var(--color-primary);
+}
+
+.services .service-item .icon i {
+  font-size: 32px;
+  color: var(--color-secondary);
+  transition: color 0.3s ease;
+}
+
+.services .service-item:hover .icon i {
+  color: #fff;
+}
+
+.services .service-item h3 {
+  font-weight: 700;
+  font-size: 22px;
+  margin-bottom: 15px;
+  border-bottom: 3px solid #ebebed;
+  padding-bottom: 6px;
+  transition: border-color 0.3s ease;
+}
+
+.services .service-item:hover h3 {
+  border-color: var(--color-primary);
+}
+
+.services .service-item p {
+  font-size: 16px;
+  line-height: 1.6;
+  flex-grow: 1;
+  color: #444;
+}
+
+.section-bg {
+  background-image: linear-gradient(160deg, #e1e1e6 0%, #200f40 50%, #56441c 50%);
+  color: #f6f6f6;
+  padding: 80px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-bg::before {
+  background: rgba(10, 10, 20, 0.6);
+}
+
+.section-product>h2 {
+  color: #dad7c8;
+  font-size: 44px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-weight: 900;
+  margin-bottom: 20px;
+  text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.4);
+}
+
+.section-product>p {
+  max-width: 720px;
+  margin: 0 auto 40px auto;
+  font-size: 18px;
+  color: #ddd;
+  font-weight: 400;
+  position: relative;
+  padding: 0 10px;
+}
+
+
+.readmore {
+  font-weight: 700;
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.readmore:hover {
+  color: var(--color-secondary);
+}
+
 
 /*-------------------------------------------------------------- catalog -------------------------------------------------------------*/
 .projects {

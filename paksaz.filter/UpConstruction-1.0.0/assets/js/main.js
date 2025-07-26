@@ -181,3 +181,22 @@ window.addEventListener('scroll', () => {
     header.classList.remove('header-bg-light');
   }
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+  const navShow = document.querySelector(".mobile-nav-show");
+  const navHide = document.querySelector(".mobile-nav-hide");
+  const navbar = document.getElementById("navbar");
+
+  navShow.addEventListener("click", () => {
+    navbar.classList.add("active");
+    navShow.classList.add("d-none");
+    navHide.classList.remove("d-none");
+  });
+
+  navHide.addEventListener("click", () => {
+    navbar.classList.remove("active");
+    navShow.classList.remove("d-none");
+    navHide.classList.add("d-none");
+  });
+});
