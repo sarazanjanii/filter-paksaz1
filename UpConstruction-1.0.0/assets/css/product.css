@@ -1,0 +1,348 @@
+:root {
+    /* Colors */
+    --color-navy: #1b2a41;
+    --color-muted-navy: #3a4a5c;
+    --color-orange: #f39c12;
+    --color-gray-light: #fafbfc;
+    --color-gray-dark: #6c757d;
+    --color-white: #ffffff;
+    --color-highlight: #7d4717;
+
+    /* Other variables */
+    --radius: 10px;
+    --transition: 0.3s ease;
+    --shadow-light: rgba(27, 42, 65, 0.08);
+    --shadow-orange-light: rgba(243, 156, 18, 0.15);
+    --shadow-orange-hover: rgba(243, 156, 18, 0.3);
+    --shadow-orange-pulse: rgba(255, 193, 7, 0.7);
+}
+
+/* ============================
+   NAVIGATION
+   ============================ */
+nav.sticky-top {
+    background-color: var(--color-white);
+    border-bottom: 2px solid var(--color-orange);
+    box-shadow: 0 1px 6px var(--shadow-orange-light);
+    transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+nav.sticky-top a.btn {
+    color: var(--color-muted-navy);
+    border: 2px solid var(--color-muted-navy);
+    transition: all var(--transition);
+}
+
+nav.sticky-top a.btn:hover {
+    background-color: var(--color-orange);
+    color: var(--color-white);
+    border-color: var(--color-orange);
+    box-shadow: 0 4px 12px var(--shadow-orange-hover);
+}
+
+/* ============================
+   SECTION HEADER
+   ============================ */
+.section-header h2 {
+    color: var(--color-navy);
+    border-bottom: 3px solid var(--color-orange);
+    padding-bottom: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: padding-bottom 0.3s ease;
+}
+
+.section-header h2::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: var(--color-orange);
+    transition: width 0.4s ease;
+    border-radius: 2px;
+}
+
+.section-header h2:hover {
+    padding-bottom: 16px;
+}
+
+.section-header h2:hover::after {
+    width: 100%;
+}
+
+/* ============================
+   PRODUCT SECTION
+   ============================ */
+.product-section {
+    background-color: var(--color-white);
+    border-left: 3px solid var(--color-highlight);
+    box-shadow: 0 3px 10px var(--shadow-light);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+    padding: 2rem;
+    border-radius: var(--radius);
+}
+
+.product-section:hover {
+    box-shadow: 0 8px 20px rgba(243, 156, 18, 0.2);
+    transform: translateY(-3px);
+}
+
+.product-section h3 {
+    color: var(--color-navy);
+    margin-bottom: 0.5rem;
+}
+
+.product-section p {
+    color: var(--color-gray-dark);
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+.product-section p .highlight {
+    color: var(--color-highlight);
+    font-weight: 900;
+}
+
+/* ============================
+   TABLES
+   ============================ */
+.table-responsive {
+    box-shadow: 0 3px 10px var(--shadow-light);
+    border-radius: var(--radius);
+    overflow-x: auto;
+}
+
+.table thead th {
+    background-color: var(--color-navy);
+    color: var(--color-orange);
+    font-weight: 700;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0.75rem 1rem;
+}
+
+.table-striped tbody tr:hover td {
+    background: #fff4e6;
+    color: var(--color-navy);
+    font-weight: 700;
+    box-shadow: 0 4px 12px var(--shadow-orange-light);
+    transition: background-color var(--transition), box-shadow var(--transition);
+}
+
+/* ============================
+   BUTTONS
+   ============================ */
+.btn-dark {
+    background: var(--color-navy);
+    color: var(--color-orange);
+    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.25);
+    transition: background-color var(--transition), box-shadow var(--transition), color var(--transition);
+    border-radius: var(--radius);
+    padding: 0.75rem 1.5rem;
+    font-weight: 600;
+}
+
+.btn-dark:hover {
+    background: var(--color-orange);
+    color: var(--color-white);
+    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
+}
+
+/* Warning Button hover - more clear */
+.btn-warning:hover {
+    background-color: #e0a800cc !important;
+    color: #002b5b !important;
+    box-shadow: 0 0 20px #ffc107 !important;
+    transition: all 0.3s ease-in-out;
+}
+
+/* ============================
+   ANIMATIONS
+   ============================ */
+@keyframes fadeInDown {
+    0% {
+        opacity: 0;
+        transform: translateY(-40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 var(--shadow-orange-pulse);
+    }
+
+    50% {
+        box-shadow: 0 0 20px 10px rgba(255, 193, 7, 0.9);
+    }
+}
+
+.animate-fade-in-down {
+    animation: fadeInDown 1s ease forwards;
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 1s ease forwards;
+    animation-delay: 0.4s;
+}
+
+.animate-pulse {
+    animation: pulse 2.5s infinite;
+}
+
+/* ============================
+   INDUSTRIAL HERO SECTION
+   ============================ */
+.industrial-hero {
+    font-family: 'Vazirmatn FD', sans-serif;
+    height: 70vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-white);
+    overflow: hidden;
+    z-index: 1;
+}
+
+.background-blur {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('../../assets/img/OilFilter/IMG_9287.JPG') center/cover no-repeat;
+    filter: blur(7px) brightness(0.45);
+    z-index: 0;
+    transform: scale(1.05);
+    animation: slow-zoom 30s infinite alternate ease-in-out;
+}
+
+.hero-title {
+    position: relative;
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.85);
+    letter-spacing: 0.07em;
+    line-height: 1.1;
+    margin-bottom: 1rem;
+    z-index: 2;
+    text-align: center;
+}
+
+.hero-subtitle {
+    position: relative;
+    font-size: 1.4rem;
+    max-width: 700px;
+    margin: 0 auto;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+    letter-spacing: 0.03em;
+    z-index: 2;
+    text-align: center;
+}
+
+@keyframes slow-zoom {
+    0% {
+        transform: scale(1.05) translateY(0);
+    }
+
+    50% {
+        transform: scale(1.1) translateY(-10px);
+    }
+
+    100% {
+        transform: scale(1.05) translateY(0);
+    }
+}
+
+/* ============================
+   RESPONSIVE
+   ============================ */
+@media (max-width: 991px) {
+    .section-header h2 {
+        font-size: 2.2rem;
+    }
+
+    .product-section {
+        padding: 1.5rem 2rem;
+    }
+
+    .product-section h3 {
+        font-size: 1.6rem;
+    }
+
+    table.table,
+    .table-bordered th,
+    .table-bordered td {
+        font-size: 0.9rem;
+    }
+
+    .btn-dark {
+        padding: 12px 20px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 575px) {
+    .section-header h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .product-section {
+        padding: 1rem 1.5rem;
+    }
+
+    .product-section h3 {
+        font-size: 1.2rem;
+    }
+
+    table.table {
+        font-size: 0.8rem;
+    }
+
+    .btn-dark {
+        padding: 10px 16px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 768px) {
+    .industrial-hero {
+        height: 50vh !important;
+    }
+
+    .hero-title {
+        font-size: 2.4rem !important;
+    }
+
+    .hero-subtitle {
+        font-size: 1.1rem !important;
+        max-width: 90%;
+    }
+
+    .btn-lg {
+        padding: 0.5rem 2.5rem !important;
+        font-size: 1rem !important;
+    }
+}
