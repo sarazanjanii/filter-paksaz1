@@ -1,3 +1,31 @@
+
+const nav = document.getElementById('navbar');
+const navShow = document.querySelector('.mobile-nav-show');
+const navHide = document.querySelector('.mobile-nav-hide');
+const overlay = document.querySelector('.menu-overlay');
+
+navShow.addEventListener('click', () => {
+  nav.classList.add('mobile-nav-active');
+  navShow.classList.add('d-none');
+  navHide.classList.remove('d-none');
+  overlay.style.display = 'block';
+});
+
+navHide.addEventListener('click', () => {
+  nav.classList.remove('mobile-nav-active');
+  navShow.classList.remove('d-none');
+  navHide.classList.add('d-none');
+  overlay.style.display = 'none';
+});
+
+overlay.addEventListener('click', () => {
+  nav.classList.remove('mobile-nav-active');
+  navShow.classList.remove('d-none');
+  navHide.classList.add('d-none');
+  overlay.style.display = 'none';
+});
+
+
 document.addEventListener('DOMContentLoaded', () => {
   "use strict";
 
