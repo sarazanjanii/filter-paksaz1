@@ -228,3 +228,38 @@ document.addEventListener("DOMContentLoaded", function () {
     navHide.classList.add("d-none");
   });
 });
+
+(() => {
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function (e) {
+    if (!form.checkValidity()) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    form.classList.add('was-validated');
+  });
+})();
+
+
+const swiper = new Swiper('.dealer-swiper', {
+  slidesPerView: 6,       // 6 کارت در صفحه نمایش بزرگ
+  spaceBetween: 20,       // فاصله 20px بین هر اسلاید
+  pagination: {
+    el: '.swiper-pagination',
+    clickable: true,
+  },
+  breakpoints: {
+    0: {
+      slidesPerView: 2,
+      spaceBetween: 10,
+    },
+    768: {
+      slidesPerView: 4,
+      spaceBetween: 15,
+    },
+    1024: {
+      slidesPerView: 6,
+      spaceBetween: 20,
+    }
+  }
+});

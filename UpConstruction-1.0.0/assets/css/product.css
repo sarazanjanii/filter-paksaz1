@@ -50,6 +50,7 @@ nav.sticky-top a.btn:hover {
     position: relative;
     cursor: pointer;
     transition: padding-bottom 0.3s ease;
+    font-size: 2.5rem;
 }
 
 .section-header h2::after {

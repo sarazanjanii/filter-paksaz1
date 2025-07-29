@@ -12,6 +12,7 @@
   <link rel="stylesheet" href="vazirmatn-master (2)/vazirmatn-master/misc/Farsi-Digits/Vazirmatn-FD-font-face.css">
   <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;700&display=swap" rel="stylesheet">
   <!-- Favicons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 
 
   <!-- Google Fonts -->
@@ -36,6 +37,7 @@
   <!-- AOS Library -->
   <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+
 
 </head>
 
@@ -62,14 +64,46 @@
 
       <!-- ناوبری -->
       <nav id="navbar" class="navbar" style="direction: rtl;">
-        <ul>
-          <li><a href="#AboutUs" class="header-nav text-white fs-4">درباره ما</a></li>
-          <li><a href="#product" class="header-nav text-white fs-4">محصولات</a></li>
-          <li><a href="#catalog" class="header-nav text-white fs-4">کاتالوگ</a></li>
-          <li><a href="#dealer" class="header-nav text-white fs-4">نمایندگی</a></li>
-          <li><a href="#info" class="header-nav text-white fs-4">اطلاعات</a></li>
+        <ul style="padding: 0; margin: 0;">
+          <li>
+            <a href="#AboutUs" class="header-nav text-white fs-4 d-flex align-items-center gap-2">
+              <i class="fas fa-info-circle"></i>
+              درباره ما
+            </a>
+          </li>
+          <li>
+            <a href="#product" class="header-nav text-white fs-4 d-flex align-items-center gap-2">
+              <i class="fas fa-box-open"></i>
+              محصولات
+            </a>
+          </li>
+          <li>
+            <a href="#catalog" class="header-nav text-white fs-4 d-flex align-items-center gap-2">
+              <i class="fas fa-book-open"></i>
+              کاتالوگ
+            </a>
+          </li>
+          <li>
+            <a href="#dealer" class="header-nav text-white fs-4 d-flex align-items-center gap-2">
+              <i class="fas fa-phone-volume"></i>
+              نمایندگی
+            </a>
+          </li>
+          <li>
+            <a href="#contactUs" class="header-nav text-white fs-4 d-flex align-items-center gap-2">
+              <i class="fas fa-phone-volume"></i>
+              ارتباط با ما
+            </a>
+          </li>
+          <li>
+            <a href="#info" class="header-nav text-white fs-4 d-flex align-items-center gap-2">
+              <i class="fas fa-address-card"></i>
+              اطلاعات
+            </a>
+          </li>
         </ul>
       </nav>
+
 
       <!-- دیو زیر لینک ها برای محو شدن -->
       <div class="menu-overlay"></div>
@@ -78,7 +112,7 @@
   </header>
 
 
-  <!-- ================== Header Section ===================== -->
+  <!-- ========================================= Header Section =============================== -->
   <section id="hero" class="hero">
 
     <div class="info d-flex align-items-center">
@@ -308,8 +342,9 @@
         </div>
 
         <div>
-          <button href="#product.html" class="button-product">مشاهده بیشتر</button>
+          <a href="product.html" class="button-product">مشاهده بیشتر</a>
         </div>
+
 
       </div>
     </section>
@@ -331,233 +366,254 @@
           data-portfolio-sort="original-order">
           <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/1.JPG" class="img-fluid" alt="image">
+                <img src="assets/img/product.img/1.JPG" class="img-fluid" alt="فیلتر خودرو ۱">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر هوای خودرو</h4>
+                  <p>کیفیت عالی با استاندارد جهانی</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div>
 
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/2..JPG" class="img-fluid" alt="image">
+                <img src="assets/img/product.img/2..JPG" class="img-fluid" alt="فیلتر خودرو ۲">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر روغن صنعتی</h4>
+                  <p>مقاوم در شرایط سخت محیطی</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div>
 
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/3..JPG" class="img-fluid " alt="">
+                <img src="assets/img/product.img/3..JPG" class="img-fluid" alt="فیلتر خودرو ۳">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر کابین</h4>
+                  <p>تنفس سالم برای سرنشینان</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div>
 
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/9..JPG" class="img-fluid" alt="image">
+                <img src="assets/img/product.img/9..JPG " class="img-fluid" alt="فیلتر خودرو ۴">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر صنعتی خاص</h4>
+                  <p>سفارشی‌سازی شده برای صنایع خاص</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div>
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/5..JPG" class="img-fluid" alt="فیلتر خودرو ۵">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر هیدرولیک</h4>
+                  <p>مناسب ماشین‌آلات سنگین</p>
+                </div>
+              </div>
+            </div>
 
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/5..JPG" class="img-fluid" alt="">
+                <img src="assets/img/product.img/6..JPG" class="img-fluid" alt="فیلتر خودرو ۶">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر گازوئیل</h4>
+                  <p>بهبود عملکرد موتورهای دیزلی</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div>
 
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/6..JPG" class="img-fluid" alt="">
+                <img src="assets/img/product.img/8..JPG" class="img-fluid" alt="فیلتر خودرو ۷">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر هوای صنعتی</h4>
+                  <p>مناسب کارگاه‌ها و کارخانه‌ها</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            </div>
+
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/8..JPG" class="img-fluid" alt="image">
+                <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="فیلتر خودرو ۸">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر دو مرحله‌ای</h4>
+                  <p>عملکرد قدرتمند و طول عمر بالا</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
-            <div class="col-lg-3 col-md-4 portfolio-item filter-remodeling">
+            </div>
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
               <div class="portfolio-content h-100">
-                <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="">
+                <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="فیلتر خودرو ۸">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر دو مرحله‌ای</h4>
+                  <p>عملکرد قدرتمند و طول عمر بالا</p>
+                </div>
               </div>
-            </div><!-- End Projects Item -->
+            </div>
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="فیلتر خودرو ۸">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر دو مرحله‌ای</h4>
+                  <p>عملکرد قدرتمند و طول عمر بالا</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="فیلتر خودرو ۸">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر دو مرحله‌ای</h4>
+                  <p>عملکرد قدرتمند و طول عمر بالا</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-2 col-md-4 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="assets/img/product.img/4..JPG" class="img-fluid" alt="فیلتر خودرو ۸">
+                <div class="portfolio-overlay">
+                  <h4>فیلتر دو مرحله‌ای</h4>
+                  <p>عملکرد قدرتمند و طول عمر بالا</p>
+                </div>
+              </div>
+            </div>
 
 
-          </div><!-- End Projects Container -->
+          </div>
+
 
         </div>
 
       </div>
     </section><!-- End Our Projects Section -->
 
-    <!-- ====================================== dealer section ==================================== -->
-    <section id="dealer" class="testimonials section-bg" style="direction: rtl;">
+    <!-- ======================================== dealer section ==================================== -->
+    <section id="dealer" class="dealer-section py-5  section-bg" style="direction: rtl;">
       <div class="container" data-aos="fade-up">
-
-        <div class="section-header">
-          <h2>نمایندگی ها</h2>
-          <p>Quam sed id excepturi ccusantium dolorem ut quis dolores nisi llum nostrum enim velit qui ut et autem uia
-            reprehenderit sunt deleniti</p>
+        <div class="section-header text-center mb-4">
+          <h2>نمایندگی‌ها</h2>
+          <p>نمایندگی‌های فعال در سراسر کشور</p>
         </div>
 
-        <div class="slides-2 swiper">
+        <div class="swiper dealer-swiper">
           <div class="swiper-wrapper">
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>تهران</h3>
-                  <h4>Ceo &amp; Founder</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus.
-                    Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+
+            <!-- هر آیتم یک شهر -->
+            <div class="swiper-slide">
+              <div class="dealer-card">تهران</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">مشهد</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">اصفهان</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">شیراز</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">تبریز</div>
+            </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">رشت</div>
             </div>
 
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>Sara Wilsson</h3>
-                  <h4>Designer</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis
-                    quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <!-- ادامه شهرها -->
+            <div class="swiper-slide">
+              <div class="dealer-card">اهواز</div>
             </div>
-
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>Jena Karlis</h3>
-                  <h4>Store Owner</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim
-                    tempor labore quem eram duis noster aute amet eram fore quis sint minim.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">کرمان</div>
             </div>
-
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>Matt Brandon</h3>
-                  <h4>Freelancer</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit
-                    minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">یزد</div>
             </div>
-
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                    quid.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">اراک</div>
             </div>
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                    quid.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">قزوین</div>
             </div>
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                    quid.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">گرگان</div>
             </div>
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                    quid.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">بوشهر</div>
             </div>
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                    quid.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">ساری</div>
             </div>
-            <div class="swiper-slide bg-light text-dark w-25">
-              <div class="testimonial-wrap">
-                <div class="testimonial-item">
-                  <h3>John Larson</h3>
-                  <h4>Entrepreneur</h4>
-                  <p>
-                    <i class="bi bi-quote quote-icon-left"></i>
-                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim
-                    culpa labore duis sunt culpa nulla illum cillum fugiat legam esse veniam culpa fore nisi cillum
-                    quid.
-                    <i class="bi bi-quote quote-icon-right"></i>
-                  </p>
-                </div>
-              </div>
+            <div class="swiper-slide">
+              <div class="dealer-card">سنندج</div>
             </div>
 
           </div>
-          <div class="swiper-pagination"></div>
-        </div>
 
+          <!-- دات نویگیشن -->
+        </div>
+        <div class="swiper-pagination mt-4"></div>
       </div>
     </section>
 
+    <!-- ====================================== contactUs section ==================================== -->
+    <section id="contactUs" class="contact-section" style="direction: rtl;">
+      <div class="container" data-aos="fade-up">
+        <div class="section-header text-center">
+          <h2>ارتباط با ما</h2>
+          <p>برای دریافت نمایندگی، اطلاعات بیشتر یا ارتباط مستقیم با ما فرم زیر را تکمیل کنید یا با شماره تماس حاصل
+            فرمایید.</p>
+        </div>
+
+        <div class="row justify-content-center align-items-start g-4">
+          <!-- فرم تماس سمت راست -->
+          <div class="col-lg-6">
+            <div class="contact-box bg-white rounded shadow p-4 h-100 d-flex flex-column justify-content-between">
+              <h5 class="mb-3 text-end text-dark fw-bold">فرم تماس</h5>
+              <form id="contact-form" class="needs-validation" novalidate>
+                <div class="row g-3">
+                  <div class="col-md-4">
+                    <input type="text" class="form-control" id="name" placeholder="نام و نام خانوادگی" required>
+                    <div class="invalid-feedback text-end">لطفاً نام و نام خانوادگی را وارد کنید.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="email" class="form-control" id="email" placeholder="ایمیل" required>
+                    <div class="invalid-feedback text-end">لطفاً یک ایمیل معتبر وارد کنید.</div>
+                  </div>
+                  <div class="col-md-4">
+                    <input type="tel" class="form-control" id="phone" placeholder="شماره تماس" required
+                      pattern="^\d{10,11}$">
+                    <div class="invalid-feedback text-end">شماره تماس را به‌درستی وارد کنید.</div>
+                  </div>
+                  <div class="col-12">
+                    <textarea class="form-control" id="message" rows="5" placeholder="پیام شما..." required></textarea>
+                    <div class="invalid-feedback text-end">لطفاً پیام خود را وارد کنید.</div>
+                  </div>
+                  <div class="col-12 text-start">
+                    <button type="submit" class="btn btn-dark px-4 py-2">ارسال پیام</button>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <!-- اطلاعات تماس سمت چپ -->
+          <div class="col-lg-6">
+            <div
+              class="contact-box bg-white rounded shadow p-4 h-100 d-flex flex-column justify-content-between text-end">
+              <h5 class="mb-3 text-dark fw-bold">تماس مستقیم</h5>
+              <p class="mb-2 text-dark">در صورت نیاز فوری به پاسخگویی یا دریافت اطلاعات:</p>
+              <a href="tel:02112345678" class="d-block fs-5 fw-bold text-primary mb-2">021-12345678</a>
+              <a href="tel:09121234567" class="d-block fs-5 fw-bold text-primary">0912-1234567</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main><!-- End #main -->
-
   <!-- ======= Footer ======= -->
   <footer id="info" class="footer" style="direction: rtl;">
 
