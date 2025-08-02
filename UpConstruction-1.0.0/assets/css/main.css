@@ -25,8 +25,6 @@ body {
   font-family: Vazirmatn FD;
   color: var(--color-default);
   overflow-x: hidden;
-  background-image: linear-gradient(white, rgb(217, 205, 205), rgb(149, 149, 149));
-  scroll-behavior: auto;
 }
 
 a {
