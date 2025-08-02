@@ -1,118 +1,191 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Smooth scroll behavior */
 :root {
-    /* Colors */
+    scroll-behavior: smooth;
+}
+
+/* حذف ریشه‌های تکراری و ترکیب متغیرها */
+:root {
     --color-navy: #1b2a41;
     --color-muted-navy: #3a4a5c;
-    --color-orange: #f39c12;
+    --color-orange: #f0ae45;
     --color-gray-light: #fafbfc;
     --color-gray-dark: #6c757d;
     --color-white: #ffffff;
     --color-highlight: #7d4717;
-
-    /* Other variables */
-    --radius: 10px;
-    --transition: 0.3s ease;
-    --shadow-light: rgba(27, 42, 65, 0.08);
+    --color-default: #364d59;
+    --color-primary: #feb900;
+    --color-secondary: #52565e;
+    --main-color: #2a2e5c;
+    --accent-color: #ffb400;
+    --bg-glow: #454a7d88;
+    --text-color: #1a1a1a;
+    --card-bg: #ffffffd8;
+    --radius: 22px;
+    --transition: 0.4s ease;
+    --font-primary: Vazirmatn FD, Arial, Helvetica, sans-serif;
+    --font-secondary: Arial, Helvetica, sans-serif;
+    --shadow-light: rgba(217, 226, 239, 0.7);
     --shadow-orange-light: rgba(243, 156, 18, 0.15);
     --shadow-orange-hover: rgba(243, 156, 18, 0.3);
     --shadow-orange-pulse: rgba(255, 193, 7, 0.7);
+    scroll-behavior: smooth;
 }
 
-/* ============================
-   NAVIGATION
-   ============================ */
-nav.sticky-top {
-    background-color: var(--color-white);
-    border-bottom: 2px solid var(--color-orange);
-    box-shadow: 0 1px 6px var(--shadow-orange-light);
-    transition: background-color var(--transition), box-shadow var(--transition);
-}
-
-nav.sticky-top a.btn {
-    color: var(--color-muted-navy);
-    border: 2px solid var(--color-muted-navy);
-    transition: all var(--transition);
-}
-
-nav.sticky-top a.btn:hover {
-    background-color: var(--color-orange);
-    color: var(--color-white);
-    border-color: var(--color-orange);
-    box-shadow: 0 4px 12px var(--shadow-orange-hover);
-}
-
-/* ============================
-   SECTION HEADER
-   ============================ */
-.section-header h2 {
+/* =================================GLOBAL RESET & BODY ============================ */
+html,
+body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    /* جلوگیری از اسکرول افقی */
+    font-family: 'Vazirmatn FD', sans-serif;
+    background-color: var(--color-gray-light);
     color: var(--color-navy);
-    border-bottom: 3px solid var(--color-orange);
-    padding-bottom: 8px;
-    position: relative;
-    cursor: pointer;
-    transition: padding-bottom 0.3s ease;
-    font-size: 2.5rem;
+    scroll-behavior: smooth;
+    /* اسکرول نرم */
 }
 
-.section-header h2::after {
+/* ======================================== hero =================================== */
+.header-hero {
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    background-color: #000;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* عکس نیمه‌شفاف با ::before */
+.header-hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('../../assets/img/OilFilter/IMG_9287.JPG') center center / cover no-repeat;
+    opacity: 0.3;
+    z-index: 1;
+}
+
+/* محتوای اصلی */
+.hero-content {
+    position: relative;
+    z-index: 2;
+    color: #fff;
+    text-align: center;
+    padding: 0 20px;
+    max-width: 1100px;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
+}
+
+.hero-content h1 {
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+    line-height: 1.1;
+    letter-spacing: 0.05em;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #f3d06e;
+    line-height: 1.6;
+    margin: 0 auto;
+    max-width: 600px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-hero {
+        height: 50vh;
+    }
+
+    .hero-content h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+        max-width: 100%;
+    }
+}
+
+/* =================================================  NAV =========================================== */
+#productTab .nav-link {
+    position: relative;
+    color: #2b2b2b;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 10px 24px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    margin-left: 5px;
+}
+
+#productTab .nav-link::after {
     content: "";
     position: absolute;
     bottom: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background-color: #f1c40f;
+    transition: transform 0.3s ease;
+    transform-origin: center;
+    border-radius: 4px;
+    z-index: 0;
+}
+
+#productTab .nav-link:hover {
+    background-color: #eaeaea;
+    color: #1a1a1a;
+    border: 1px solid var(--color-orange);
+}
+
+#productTab .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+    border: 1px solid var(--color-orange);
+}
+
+#productTab .nav-link.active {
+    background-color: #fdf6e3;
+    color: #111;
+    border: 1px solid var(--color-orange);
+    font-weight: 700;
+}
+
+#productTab .nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
     background-color: var(--color-orange);
-    transition: width 0.4s ease;
-    border-radius: 2px;
 }
 
-.section-header h2:hover {
-    padding-bottom: 16px;
+/* ریسپانسیو */
+@media (max-width: 768px) {
+    #productTab .nav-link {
+        font-size: 0.9rem;
+        padding: 8px 16px;
+        border-radius: 10px;
+    }
 }
 
-.section-header h2:hover::after {
-    width: 100%;
-}
 
-/* ============================
-   PRODUCT SECTION
-   ============================ */
-.product-section {
-    background-color: var(--color-white);
-    border-left: 3px solid var(--color-highlight);
-    box-shadow: 0 3px 10px var(--shadow-light);
-    transition: box-shadow 0.3s ease, transform 0.3s ease;
-    padding: 2rem;
-    border-radius: var(--radius);
-}
 
-.product-section:hover {
-    box-shadow: 0 8px 20px rgba(243, 156, 18, 0.2);
-    transform: translateY(-3px);
-}
-
-.product-section h3 {
-    color: var(--color-navy);
-    margin-bottom: 0.5rem;
-}
-
-.product-section p {
-    color: var(--color-gray-dark);
-    font-weight: 400;
-    line-height: 1.5;
-}
-
-.product-section p .highlight {
-    color: var(--color-highlight);
-    font-weight: 900;
-}
-
-/* ============================
-   TABLES
-   ============================ */
+/* ======================================== Table product ========================================== */
 .table-responsive {
-    box-shadow: 0 3px 10px var(--shadow-light);
+    box-shadow: 0 5px 15px var(--shadow-light);
     border-radius: var(--radius);
     overflow-x: auto;
+    margin-bottom: 2rem;
+    scroll-behavior: smooth;
 }
 
 .table thead th {
@@ -122,6 +195,7 @@ nav.sticky-top a.btn:hover {
     text-align: center;
     vertical-align: middle;
     padding: 0.75rem 1rem;
+    user-select: none;
 }
 
 .table-striped tbody tr:hover td {
@@ -132,218 +206,235 @@ nav.sticky-top a.btn:hover {
     transition: background-color var(--transition), box-shadow var(--transition);
 }
 
-/* ============================
-   BUTTONS
-   ============================ */
-.btn-dark {
-    background: var(--color-navy);
+.highlight {
     color: var(--color-orange);
-    box-shadow: 0 3px 10px rgba(243, 156, 18, 0.25);
-    transition: background-color var(--transition), box-shadow var(--transition), color var(--transition);
-    border-radius: var(--radius);
-    padding: 0.75rem 1.5rem;
-    font-weight: 600;
-}
-
-.btn-dark:hover {
-    background: var(--color-orange);
-    color: var(--color-white);
-    box-shadow: 0 6px 20px rgba(243, 156, 18, 0.4);
-}
-
-/* Warning Button hover - more clear */
-.btn-warning:hover {
-    background-color: #e0a800cc !important;
-    color: #002b5b !important;
-    box-shadow: 0 0 20px #ffc107 !important;
-    transition: all 0.3s ease-in-out;
-}
-
-/* ============================
-   ANIMATIONS
-   ============================ */
-@keyframes fadeInDown {
-    0% {
-        opacity: 0;
-        transform: translateY(-40px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes fadeInUp {
-    0% {
-        opacity: 0;
-        transform: translateY(40px);
-    }
-
-    100% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-@keyframes pulse {
-
-    0%,
-    100% {
-        box-shadow: 0 0 0 0 var(--shadow-orange-pulse);
-    }
-
-    50% {
-        box-shadow: 0 0 20px 10px rgba(255, 193, 7, 0.9);
-    }
-}
-
-.animate-fade-in-down {
-    animation: fadeInDown 1s ease forwards;
-}
-
-.animate-fade-in-up {
-    animation: fadeInUp 1s ease forwards;
-    animation-delay: 0.4s;
-}
-
-.animate-pulse {
-    animation: pulse 2.5s infinite;
-}
-
-/* ============================
-   INDUSTRIAL HERO SECTION
-   ============================ */
-.industrial-hero {
-    font-family: 'Vazirmatn FD', sans-serif;
-    height: 70vh;
+    font-weight: 700;
     position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--color-white);
-    overflow: hidden;
     z-index: 1;
 }
 
-.background-blur {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: url('../../assets/img/OilFilter/IMG_9287.JPG') center/cover no-repeat;
-    filter: blur(7px) brightness(0.45);
-    z-index: 0;
-    transform: scale(1.05);
-    animation: slow-zoom 30s infinite alternate ease-in-out;
+
+/* =============== Scrollbar (Webkit & Firefox) ================ */
+*::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
 }
 
-.hero-title {
-    position: relative;
-    font-size: 3.5rem;
-    font-weight: 700;
-    text-shadow: 4px 4px 15px rgba(0, 0, 0, 0.85);
-    letter-spacing: 0.07em;
-    line-height: 1.1;
-    margin-bottom: 1rem;
-    z-index: 2;
-    text-align: center;
+*::-webkit-scrollbar-track {
+    background: var(--color-gray-light);
+    border-radius: var(--radius);
 }
 
-.hero-subtitle {
-    position: relative;
-    font-size: 1.4rem;
-    max-width: 700px;
+*::-webkit-scrollbar-thumb {
+    background-color: var(--color-orange);
+    border-radius: var(--radius);
+    border: 3px solid var(--color-gray-light);
+    transition: background-color 0.25s ease;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #181715;
+}
+
+/* Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--color-gray-dark);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* ================= back button ======================= */
+.back-button {
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    background-color: #e5a700;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    border-radius: 15px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    cursor: pointer;
+    z-index: 9999;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    text-decoration: none;
+}
+
+.back-button:hover {
+    transform: translateY(-2px);
+}
+
+/* =============================================== footer ========================================== */
+.footer {
+    background-color: white;
+    color: var(--color-text);
+    padding: 40px 20px 20px 20px;
+    border-top: 3px solid var(--color-primary);
+    box-shadow: 0 -3px 10px rgba(45, 156, 219, 0.1);
+    direction: rtl;
+    text-align: right;
+}
+
+.footer .footer-content {
+    max-width: 900px;
     margin: 0 auto;
-    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.7);
-    letter-spacing: 0.03em;
-    z-index: 2;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.footer-info {
+    flex: 1 1 280px;
+}
+
+.footer-links {
+    flex: 1 1 220px;
+}
+
+.footer-social-copy {
+    flex: 1 1 220px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    text-align: left;
+    /* چون سمت چپ هست */
+}
+
+/* استایل نام کارخانه */
+.footer-info h3 {
+    font-weight: 700;
+    font-size: 24px;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.footer-info p {
+    font-size: 14px;
+    line-height: 1.5;
+    color: var(--color-text);
+    margin: 0;
+}
+
+/* لینک‌ها */
+.footer-links h4 {
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--color-primary);
+    border-bottom: 2px solid var(--color-primary);
+    display: inline-block;
+    padding-bottom: 4px;
+    letter-spacing: 0.7px;
+}
+
+.footer-links ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links ul li {
+    margin-bottom: 10px;
+}
+
+.footer-links ul li a {
+    text-decoration: none;
+    color: var(--color-text);
+    font-size: 14px;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+.footer-links ul li a::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.footer-links ul li a:hover {
+    color: var(--color-primary);
+}
+
+.footer-links ul li a:hover::after {
+    width: 100%;
+    right: 0;
+}
+
+/* شبکه‌های اجتماعی */
+.social-links {
+    display: flex;
+    gap: 15px;
+    justify-content: flex-start;
+    margin-bottom: 20px;
+}
+
+.social-links a {
+    color: var(--color-primary);
+    font-size: 22px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #1769aa;
+    transform: translateY(-5px);
+}
+
+/* کپی‌رایت */
+.footer-copy {
+    font-size: 13px;
+    color: #999;
+    letter-spacing: 0.5px;
+    border-top: 1px solid #ddd;
+    padding-top: 10px;
+    margin-top: auto;
     text-align: center;
 }
 
-@keyframes slow-zoom {
-    0% {
-        transform: scale(1.05) translateY(0);
-    }
-
-    50% {
-        transform: scale(1.1) translateY(-10px);
-    }
-
-    100% {
-        transform: scale(1.05) translateY(0);
-    }
-}
-
-/* ============================
-   RESPONSIVE
-   ============================ */
-@media (max-width: 991px) {
-    .section-header h2 {
-        font-size: 2.2rem;
-    }
-
-    .product-section {
-        padding: 1.5rem 2rem;
-    }
-
-    .product-section h3 {
-        font-size: 1.6rem;
-    }
-
-    table.table,
-    .table-bordered th,
-    .table-bordered td {
-        font-size: 0.9rem;
-    }
-
-    .btn-dark {
-        padding: 12px 20px;
-        font-size: 13px;
-    }
-}
-
-@media (max-width: 575px) {
-    .section-header h2 {
-        font-size: 1.6rem;
-        margin-bottom: 1.5rem;
-    }
-
-    .product-section {
-        padding: 1rem 1.5rem;
-    }
-
-    .product-section h3 {
-        font-size: 1.2rem;
-    }
-
-    table.table {
-        font-size: 0.8rem;
-    }
-
-    .btn-dark {
-        padding: 10px 16px;
-        font-size: 12px;
-    }
-}
-
+/* ریسپانسیو */
 @media (max-width: 768px) {
-    .industrial-hero {
-        height: 50vh !important;
+    .footer .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
 
-    .hero-title {
-        font-size: 2.4rem !important;
+    .footer-info,
+    .footer-links,
+    .footer-social-copy {
+        flex: unset;
+        width: 100%;
+        text-align: center;
     }
 
-    .hero-subtitle {
-        font-size: 1.1rem !important;
-        max-width: 90%;
+    .footer-social-copy {
+        align-items: center;
     }
 
-    .btn-lg {
-        padding: 0.5rem 2.5rem !important;
-        font-size: 1rem !important;
+    .social-links {
+        justify-content: center;
     }
+}
+
+.footer-copy {
+    font-size: 13px;
+    color: #aaa;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    margin-top: 15px;
+    text-align: center;
 }
